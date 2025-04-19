@@ -31,7 +31,7 @@
             "description": "Start the frontend application",
             "runAtStart": true,
             "preview": {
-                "port": 5173
+                "port": 3000
             }
         }
     }
