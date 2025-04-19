@@ -1,32 +1,31 @@
 {
-    "setupTasks": [
-        {
-            "command": "cd photo-sharing-v1 && npm install && cd ..",
-            "name": "Install Frontend Dependencies"
-        },
-        {
-            "command": "cd photo-sharing-backend && npm install && cd ..",
-            "name": "Install Backend Dependencies"
-        }
-    ],
-    "tasks": {
-        "start-backend": {
-            "command": "npm start",
-            "cwd": "photo-sharing-backend",
-            "description": "Start the backend server",
-            "runAtStart": true,
-            "preview": {
-                "port": 8080
-            }
-        },
-        "start-frontend": {
-            "command": "npm start",
-            "cwd": "photo-sharing-v1",
-            "description": "Start the frontend application",
-            "runAtStart": true,
-            "preview": {
-                "port": 3000
-            }
-        }
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "cd photo-sharing-v1 && npm install && cd ..",
+      "command": "cd photo-sharing-backend && npm install && cd .."
+    },
+    {
+      "name": "cd photo-sharing-v1 && npm install && cd ..",
+      "command": "cd photo-sharing-v1 && npm install && cd .."
     }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "cd photo-sharing-backend && npm run dev": {
+      "name": "run back end",
+      "command": "cd photo-sharing-backend && npm run dev",
+      "preview": {
+        "port" : 8080
+      }
+    },
+    "cd photo-sharing-v1 && npm run start": {
+      "name": "run front end ",
+      "command": "cd photo-sharing-v1 && npm run start",
+      "preview": {
+        "port" : 3000
+      }
+    }
+  }
 }
