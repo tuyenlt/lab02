@@ -13,6 +13,7 @@
     "run back end": {
       "name" : "run back end",
       "command": "cd photo-sharing-backend && npm run dev",
+      "runAtStart": true,
       "preview": {
         "port": 8080
       }
@@ -20,6 +21,7 @@
     "run front end": {
       "name":"run front end",
       "command": "cd photo-sharing-v1 && npm run start",
+      "runAtStart": true,
       "preview": {
         "port": 3000
       }
