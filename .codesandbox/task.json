@@ -1,4 +1,14 @@
 {
+    "setupTasks": [
+        {
+            "command": "cd photo-sharing-v1 && npm install && cd ..",
+            "name": "Install Frontend Dependencies"
+        },
+        {
+            "command": "cd photo-sharing-backend && npm install && cd ..",
+            "name": "Install Backend Dependencies"
+        }
+    ],
     "tasks": {
         "start-backend": {
             "command": "npm",
@@ -6,7 +16,11 @@
                 "start"
             ],
             "cwd": "photo-sharing-backend",
-            "description": "Start the backend server"
+            "description": "Start the backend server",
+            "runAtStart": true,
+            "preview": {
+                "port": 8080
+            }
         },
         "start-frontend": {
             "command": "npm",
@@ -14,7 +28,11 @@
                 "start"
             ],
             "cwd": "photo-sharing-v1",
-            "description": "Start the frontend application"
+            "description": "Start the frontend application",
+            "runAtStart": true,
+            "preview": {
+                "port": 5173
+            }
         }
     }
 }
