@@ -11,10 +11,7 @@
     ],
     "tasks": {
         "start-backend": {
-            "command": "npm",
-            "args": [
-                "start"
-            ],
+            "command": "npm start",
             "cwd": "photo-sharing-backend",
             "description": "Start the backend server",
             "runAtStart": true,
@@ -23,10 +20,7 @@
             }
         },
         "start-frontend": {
-            "command": "npm",
-            "args": [
-                "start"
-            ],
+            "command": "npm start",
             "cwd": "photo-sharing-v1",
             "description": "Start the frontend application",
             "runAtStart": true,
