@@ -11,12 +11,14 @@
   ],
   "tasks": {
     "run back end": {
+      "name" : "run back end",
       "command": "cd photo-sharing-backend && npm run dev",
       "preview": {
         "port": 8080
       }
     },
     "run front end": {
+      "name":"run front end",
       "command": "cd photo-sharing-v1 && npm run start",
       "preview": {
         "port": 3000
